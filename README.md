@@ -214,9 +214,9 @@ boton_reanudar.pack(side=tk.LEFT, padx=40)
 
 ## Pruebas de ejecución
 
-![img.png](https://github.com/L-ordo/SO2-AdminTareas_py/tree/main/Imagenes%20Docu/img.png)
-![img_1.png](https://github.com/L-ordo/SO2-AdminTareas_py/tree/main/Imagenes%20Docu/img_1.png)
-![img_2.png](https://github.com/L-ordo/SO2-AdminTareas_py/tree/main/Imagenes%20Docu/img_2.png)
-![img_3.png](https://github.com/L-ordo/SO2-AdminTareas_py/tree/main/Imagenes%20Docu/img_3.png)
-![img_4.png](https://github.com/L-ordo/SO2-AdminTareas_py/tree/main/Imagenes%20Docu/img_4.png)
-![img_5.png](https://github.com/L-ordo/SO2-AdminTareas_py/tree/main/Imagenes%20Docu/img_5.png)
+![img.png](https://raw.githubusercontent.com/L-ordo/SO2-AdminTareas_py/refs/heads/main/Imagenes%20Docu/img.png)
+![img_1.png](https://raw.githubusercontent.com/L-ordo/SO2-AdminTareas_py/refs/heads/main/Imagenes%20Docu/img_1.png)
+![img_2.png](https://raw.githubusercontent.com/L-ordo/SO2-AdminTareas_py/refs/heads/main/Imagenes%20Docu/img_2.png)
+![img_3.png](https://raw.githubusercontent.com/L-ordo/SO2-AdminTareas_py/refs/heads/main/Imagenes%20Docu/img_3.png)
+![img_4.png](https://raw.githubusercontent.com/L-ordo/SO2-AdminTareas_py/refs/heads/main/Imagenes%20Docu/img_4.png)
+![img_5.png](https://raw.githubusercontent.com/L-ordo/SO2-AdminTareas_py/refs/heads/main/Imagenes%20Docu/img_5.png)
