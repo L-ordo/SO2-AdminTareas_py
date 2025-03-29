@@ -4,12 +4,18 @@ import psutil
 
 # Lista completa de procesos (para usar con el filtro)
 todos_procesos = []
+ultimo_pid_seleccionado = None  # Variable para guardar la última selección
 
 
 # Función para actualizar la lista de procesos
 def actualizar_procesos():
-    global todos_procesos
+    global todos_procesos, ultimo_pid_seleccionado
     todos_procesos = []
+
+    # Guardar PID seleccionado antes de actualizar
+    seleccion = tree.selection()
+    if seleccion:
+        ultimo_pid_seleccionado = int(tree.item(seleccion[0], 'values')[0])
 
     for proc in psutil.process_iter(attrs=['pid', 'name', 'cpu_percent', 'memory_info', 'status']):
         try:
@@ -33,7 +39,30 @@ def actualizar_procesos():
 
     # Aplicar filtro actual
     aplicar_filtro()
+
+    # Restaurar la selección después de actualizar
+    restaurar_seleccion()
+
     ventana.after(2000, actualizar_procesos)  # Actualizar cada 2 segundos
+
+
+# Función para restaurar la selección después de actualizar
+def restaurar_seleccion():
+    if ultimo_pid_seleccionado:
+        for item in tree.get_children():
+            pid_item = int(tree.item(item, 'values')[0])
+            if pid_item == ultimo_pid_seleccionado:
+                tree.selection_set(item)
+                tree.see(item)  # Asegura que el item seleccionado sea visible
+                break
+
+
+# Función para registrar cuando el usuario selecciona un proceso
+def al_seleccionar(event):
+    global ultimo_pid_seleccionado
+    seleccion = tree.selection()
+    if seleccion:
+        ultimo_pid_seleccionado = int(tree.item(seleccion[0], 'values')[0])
 
 
 # Función para mapear estado de proceso a español
@@ -155,6 +184,9 @@ tree.column("Nombre", width=200)
 tree.column("Estado", width=100)
 tree.column("CPU (%)", width=80)
 tree.column("Memoria (MB)", width=120)
+
+# Vincular evento de selección
+tree.bind("<<TreeviewSelect>>", al_seleccionar)
 
 # Añadir scrollbar dentro del frame de procesos
 scrollbar = ttk.Scrollbar(frame_procesos, orient="vertical", command=tree.yview)
