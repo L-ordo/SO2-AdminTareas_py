@@ -69,7 +69,7 @@ def al_seleccionar(event):
 def mapear_estado(status):
     estados = {
         'running': 'Ejecutando',
-        'sleeping': 'Durmiendo',
+        'sleeping': 'Ejecutando',
         'disk-sleep': 'Esperando I/O',
         'stopped': 'Detenido',
         'tracing-stop': 'Tracing Stop',
