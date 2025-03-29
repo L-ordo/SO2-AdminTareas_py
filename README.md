@@ -211,3 +211,12 @@ boton_suspender.pack(side=tk.LEFT, padx=40)
 boton_reanudar = tk.Button(frame_botones, text="Reanudar Proceso", command=reanudar_proceso)
 boton_reanudar.pack(side=tk.LEFT, padx=40)
 ```
+
+## Pruebas de ejecución
+
+![img.png](Imagenes Docu/img.png)
+![img_1.png](Imagenes Docu/img_1.png)
+![img_2.png](Imagenes Docu/img_2.png)
+![img_3.png](Imagenes Docu/img_3.png)
+![img_4.png](Imagenes Docu/img_4.png)
+![img_5.png](Imagenes Docu/img_5.png)
