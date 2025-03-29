@@ -65,7 +65,7 @@ def al_seleccionar(event):
         ultimo_pid_seleccionado = int(tree.item(seleccion[0], 'values')[0])
 
 
-# Función para mapear estado de proceso a español
+# Función para mapear estado de proceso del sistema
 def mapear_estado(status):
     estados = {
         'running': 'Ejecutando',
